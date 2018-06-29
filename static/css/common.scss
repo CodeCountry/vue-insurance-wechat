@@ -1,0 +1,850 @@
+/**
+ * Created on 13:50 2018/05/03.
+ * file name test
+ * by sh01114
+ */
+*{
+  font-family: -apple-system-font,Helvetica Neue,sans-serif;
+}
+body,html{
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  overflow: hidden;
+}
+html{
+  font-size:2.8rem;
+}
+body{
+  line-height: 1.6;
+  background-color: #fff!important;
+}
+@media only screen and (max-device-width : 320px){
+  .wrapper_scroll{font-size: 14px !important;}
+}
+@media screen and (min-device-width:320px){
+  .wrapper_scroll{font-size: 16px !important;}
+}
+/*mobile插件调整*/
+.mobileSelect .content .btnBar{
+  background-color: #50CACD;
+  color: #fff;
+}
+.mobileSelect .content .btnBar .cancel,.mobileSelect .content .btnBar .ensure{
+  color: #fff!important;
+}
+#app{
+  .iframeDivImg{
+    width: .5rem;
+    height: .5rem;
+    position: fixed;
+    top: .4rem;
+    right: .4rem;
+    z-index:100000;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+  }
+  .iframeDiv{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    //width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    -webkit-overflow-scrolling: touch;
+    overflow: scroll;
+    //overflow-x: hidden;
+    padding: .2rem;
+    iframe{
+      width: 100%;
+      background-color: #f8f8f8;
+      height: 100%;
+      border-radius: 16px;
+      //padding: .1rem 0;
+      //overflow-y: scroll;
+      //-webkit-overflow-scrolling: touch;
+    }
+  }
+  .wrapper_scroll.orderList{
+    height:100%;
+    overflow: scroll;
+    background-color: #f8f8f8;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+  }
+  .wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #fff;
+    overflow: auto;
+  }
+  .left{
+    float:left;
+  }
+  .clear{
+    clear: both;
+  }
+  .blue{
+    color: blue;
+  }
+  /**/
+  /*全局色调*/
+  .base_bg{
+    background-color: #50CACD!important;
+  }
+  .base_color{
+    color: #50CACD!important;
+  }
+  .red_color{
+    color: #df5062!important;
+  }
+  .silver{
+    color: #999!important;
+  }
+  .silver_bg{
+    background-color: #f5f5f5;
+    padding: 0;
+  }
+  .base_btn{
+    color: #fff;
+    /*padding:.1rem .18rem;*/
+    border-radius: 20px;
+    font-size: .24rem;
+    width: 1.5rem;
+    height: .5rem;
+    line-height: .5rem;
+    display: inline-block;
+    text-align: center;
+    border: none;
+  }
+  .border-bottom{
+    border-bottom: 1px solid #efefef;
+  }
+  .border-bottomN{
+    border-bottom: none!important;
+  }
+  .width3{
+    width: 2.5rem;
+  }
+  .black{
+    color:#333;
+  }
+  .font_big{
+    font-size:1.5rem;
+  }
+  /*----调整样式start----*/
+  .yd-cell-item{
+    margin:0 .5rem;
+    padding-left: 0;
+    border-bottom: 1px solid #ddd;
+    height:.76rem;
+  }
+  .yd-cell-left {
+    padding-right: .4rem;
+    span{
+      color: #666;
+    }
+  }
+  .yd-cell-right{
+    min-height: .4rem!important;
+    padding-left: .1rem;
+    padding-right: 0;
+    justify-content: flex-start;  // UI组件中默认是flex-end
+    .yd-textarea>textarea{
+      height:.8rem;
+    }
+    input{
+      display: inline!important;
+      height:.7rem!important;
+      width:87%!important;
+    }
+    .inputText{
+      width:100%;
+      text-align: left;
+    }
+  }
+  .yd-cell-right .yd-input-clear, .yd-cell-right .yd-input-password{
+    height: .7rem !important;
+  }
+  .yd-input-clear, .yd-input-error, .yd-input-password, .yd-input-success, .yd-input-warn{
+    display: inline;
+    line-height: .7rem;
+  }
+  .cell-input{
+    //padding-left: .5rem;
+    input{
+      height: .7rem!important;
+    }
+  }
+  .yd-input{
+    height: .7rem!important;
+    font-size:.3rem;
+    input{
+      height: .7rem!important;
+    }
+    &.bigFont{
+      input{
+        font-size:.38rem;
+      }
+    }
+  }
+  .yd-btn{
+    width:2rem!important;
+    padding:0;
+  }
+  .yd-btn-primary:active{
+    background-color: #50CACD;
+  }
+  .input_list {
+    .yd-cell-item{
+      border-bottom:1px solid #D7D7D7;
+      padding-left: 0!important;
+      &:not(:last-child):after{
+        border-bottom: none;
+      }
+    }
+    .label_item{
+      border-bottom: 0;
+      line-height: .5rem;
+      height: auto;
+    }
+  }
+
+
+  .btn-disabled{
+    background-color: #ccc!important;
+    color: #f0f0f0!important;
+    pointer-events: none!important;
+  }
+  .yd-cell-right input[type="radio"]:checked + .yd-cell-checkbox-icon:after, .yd-cell-right input[type="checkbox"]:not(.m-switch):checked + .yd-cell-checkbox-icon:after{
+    color: #50CACD;
+  }
+  .yd-checkbox{
+    padding:0;
+  }
+  .yd-checkbox-text,.yd-checkbox~a{
+    font-size:.26rem;
+    pointer-events: all; // 点击事件
+  }
+
+  /*弹框调整*/
+  .confirm-ft > a.confirm-btn.primary{
+    color: #50CACD;
+  }
+  /*上面提示调整*/
+  .yd-notify{
+    background-color: #df5062;
+    padding: .15rem .24rem;
+  }
+  /*----调整样式end-----*/
+  .back_bg{
+    padding: 0;
+    /*background:#fff url(../img/bg@3x.png) no-repeat top;*/
+    background-size: 100%;
+    .center{
+      text-align: center;
+      font-size:.3rem;
+      margin-top:1.5rem;
+      p{
+        margin-bottom: .2rem;
+      }
+    }
+    .logo_progress~.center{
+      margin-top: 0;
+    }
+    p .silver{
+      font-size:.24rem;
+    }
+  }
+  .logo_progress{
+    margin-top: 3rem;
+    margin-bottom: .8rem;
+    text-align: center;
+    img{
+      width: 2rem;
+      margin: 0 auto;
+    }
+  }
+  .activation_finish {
+    .logo {
+      margin-top: 1.1rem;
+      text-align: center;
+      img{
+        width: 4.2rem;
+        margin: 0 auto;
+        transition:all .3s;
+        -webkit-transition:all .3s;
+        -o-transition:all .3s;
+      }
+    }
+    .title_center{
+      margin: .5rem auto 2rem auto;
+      text-align: center;
+      font-size: .34rem;
+      color: #555;
+    }
+  }
+
+  .banner_logo{
+    text-align:center;
+    img{
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  img.phone_logo{
+    width: .48rem;height: .5rem;
+  }
+  .login_div{
+    padding: .6rem .1rem;
+  }
+  .input_list{
+    margin-bottom: .5rem;
+  }
+  .button_div{
+    padding: 0 .55rem;
+    margin-bottom: .5rem;
+  }
+  .button_div .btn_base:last-child,.button_div .btn_unable:last-child{
+    //margin-top: .3rem;
+  }
+  .button_div .btn_base,.button_div .btn_unable,.button_div .btn_white,.model_bottom .model_btn{
+    background:url(/static/img/btn_normal.png) repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    border: none;
+    height: .9rem;
+    line-height: .9rem;
+    color: #fff;
+    font-size:.38rem;
+    display: inline-block;
+    text-align: center;
+  }
+  .button_div .btn_base:active {
+    background: url(/static/img/btn_click.png);
+    background-size: 100% 100%;
+    color: #fff;
+  }
+  .position_button {
+    position: absolute;
+    bottom:1.5rem;
+    left:0;right:0;
+  }
+  .check_div{
+    margin-top: .6rem;
+    text-align: center;
+  }
+  /*-----------------------------chooseBrand--------------------*/
+  .brandContent{
+    height:100%;
+    background: url(/static/img/pic_brand.png) no-repeat 0 100%;
+    background-size: 100%;
+    .chooseBrand {
+      margin: 1rem .5rem;
+      line-height: 1.7;
+      .brand{
+        font-size: .35rem;
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        color: #999;
+        margin:.5rem 0;
+        &.oddBrand{
+          width:33%;
+        }
+        span{
+          background-color: #f2f2f2;
+          border-radius: 1rem;
+          padding: .1rem .3rem;
+          &.active{
+            background-color: #55c5d5;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  /*-----------------------------step---------------------------*/
+  .top_title{
+    height: 1.4rem;
+    padding: .4rem 0 0 .3rem;
+    margin-bottom: .2rem;
+    .title_tit{
+      float: left;
+      font-size: .35rem;
+      line-height: .9rem;
+      color:#0b6a78;
+      padding-left: .3rem;
+    }
+    .stepNum{
+      float: left;
+      position: relative;
+      width: 1rem;
+      height: 1rem;
+      color: #fff;
+      img{
+        width:1rem;
+        height:1rem;
+      }
+      .currentStep{
+        position: absolute;
+        top: .05rem;
+        left: .25rem;
+        font-size: .42rem;
+      }
+      .steps{
+        position: absolute;
+        bottom: .08rem;
+        right: .3rem;
+        font-size: .26rem;
+      }
+    }
+  }
+  /*-------------------------身份证信息&人脸-------------------------*/
+  .marginTop0{
+    margin-top: 0 !important;
+  }
+  .idCard_photos{
+    margin: 1rem 1.5rem .3rem 1.5rem;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    .photo{
+      box-shadow:0 3px 6px 0 rgba(155,155,155,0.50);
+      border-radius: .15rem;
+      padding: .1rem;
+      width: 100%;
+      height: 3rem;
+      text-align: center;
+      position: relative;
+      img{
+        width: 98%;
+        z-index: 111;
+        height: 99%;
+      }
+      .file_picture{
+        position: absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        width:100%;
+        z-index:0;
+        opacity:0;
+      }
+    }
+    .tit{
+      text-align: center;
+      margin-top: .15rem;
+      font-size: .26rem;
+      color: #777;
+    }
+  }
+  .idCard_message{
+    .button_div{
+      margin-top: .4rem;
+      text-align: center;
+      /*position: absolute;
+      bottom: .8rem;
+      left: .4rem;
+      right: .4rem;*/
+    }
+    .intro{
+      font-size: .24rem;
+      color: #999;
+    }
+  }
+  .message{
+    box-shadow: 2px 3px 6px 2px rgba(155, 155, 155, 0.5);
+    border-radius: .4rem .4rem 0 0;
+    padding: .1rem 0 .4rem 0;
+    margin:0 .5rem;
+    min-height: 6.5rem;
+    .input_list{
+      margin-bottom: 0;
+    }
+    .yd-cell-right{
+      .yd-cell-input{
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .blue_btn{
+        color: #50CACD;
+        font-size: .25rem;
+        padding:0;
+        opacity: .5;
+      }
+    }
+  }
+  .next_step{
+    color:#4a4a4a;
+    text-decoration: underline;
+    margin-top: .25rem;
+    display: inline-block;
+    font-size: .26rem;
+  }
+  /*-------------------------身份证信息&人脸end----------------------*/
+  /*-------------------------subTitle-------------------------------*/
+  .sub{
+    margin: .2rem 0;
+    .subTitle{
+      display: inline;
+      padding: .1rem .45rem .1rem .6rem;
+      background-color: #f2f2f2;
+      -webkit-border-radius: 0 .3rem .3rem 0;
+      -moz-border-radius: 0 .3rem .3rem 0;
+      border-radius: 0 .3rem .3rem 0;
+      font-size: .28rem;
+      color: #666;
+    }
+  }
+  /*-------------------------blankLine-----------------------------*/
+  .blankLine{
+    height: .5rem;
+  }
+  /*-------------------------multiSelect---------------------------*/
+  .yd-checkbox-group .yd-checkbox-icon{
+    display: none;
+  }
+  .yd-checkbox-group .yd-checkbox>input[type=checkbox]:checked~.yd-checkbox-text{
+    background-color: #50CACD;
+    //padding: .06rem 0;
+    border-radius: 20px;
+    color: #fff;
+  }
+  .yd-checkbox-group{
+    justify-content: flex-start;
+    display: flex;width: 100%;
+    .yd-checkbox{
+      flex:1;
+      -webkit-flex: 1;
+      text-align: center;
+      .yd-checkbox-text{
+        width: 100%;
+        display: inline-block;
+        padding: .05rem 0;
+        margin-left: 0;
+        line-height: 1.5;
+      }
+    }
+  }
+  /*-----------------------------checkbox----------------------------*/
+  .yd-checkbox-icon{
+    width: .36rem!important;
+    height: .36rem!important;
+    &>i{
+      width: .13rem!important;
+      height: .2rem!important;
+      top:40%;
+    }
+  }
+  .checkBox{
+    margin:.2rem 0;
+    text-align: center;
+    a{
+      color: #2191a2;
+      font-size: .25rem;
+    }
+  }
+  .yd-checkbox{
+    a{
+      color: #2191a2;
+    }
+  }
+  /*------------------------------tips------------------------------*/
+  .commit_tips {
+    color: #9b9b9b;
+    text-align: center;
+    margin-top: .1rem;
+    font-size: .22rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: .5rem;
+    line-height: .5rem;
+    background-color: #fff;
+  }
+  /*------------------------------验证码弹框------------------------------*/
+  .model{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.4);
+    z-index:999;
+    .model_content{
+      width: 85%;
+      margin: 3rem auto;
+      height: 4rem;
+      .model_top{
+        background-color: #fff;
+        width: 100%;
+        height: 4rem;
+        border-radius:20px;
+        text-align:center;
+        font-size:.3rem;
+        position:relative;
+        padding: .4rem;
+        i{
+          display: inline-block;
+          width: .25rem;height: .25rem;
+          background: url(/static/img/wrong.png) no-repeat;
+          background-size: 100% 100%;
+          position:absolute;
+          top:.3rem;
+          right:.3rem;
+        }
+        .model_input{
+          margin-top:.4rem;
+          display:flex;
+          .input_code{
+            width: 3.5rem;
+            height: .8rem;
+            background-color: #f3f3f3;
+            border-radius: 10px 0 0 10px;
+            &.input_phone{
+              width:100%;
+              -webkit-border-radius: 10px;
+              -moz-border-radius: 10px;
+              border-radius: 10px;
+            }
+            .yd-input{
+              height: .8rem !important;
+              padding: 0 .6rem;
+            }
+            input{
+              border:0;
+              height: 100%;
+              width: 100%;
+              font-size: .35rem;
+            }
+          }
+          .code_div{
+            flex: 1;
+          }
+        }
+      }
+      .model_bottom {
+        text-align: center;
+        .model_btn{
+          width:80%;
+          background: url(/static/img/btn_normal.png);
+          background-size: 100% 100%;
+          color: #fff;
+          margin-top: .5rem;
+          font-size: .4rem;
+          &:active{
+            background: url(/static/img/btn_click.png);
+            background-size: 100% 100%;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  #getCode {
+    display: inline-block;
+    background: #50CACD;
+    border-radius: 0 10px 10px 0;
+    color: #fff;
+    font-size: .28rem;
+    width: 100%!important;
+    height: .8rem;
+    border: 0;
+  }
+  .sendCode{
+    opacity:0.6;
+    background:#000000;
+    border-radius:5px 6px 6px 6px;
+    width:120px;
+    height:40px;
+    line-height: 40px;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+    display: none;
+    position: absolute;
+    left: 30%;
+    top: 73%;
+  }
+  /*----------------------验证码弹框end----------------------------*/
+
+
+  /*----------------------------列表---------------------------------*/
+  .orderList .content{
+    .item {
+      width: 100%;
+      padding: .25rem .15rem;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      margin-bottom: 1px;
+      background: #FFFFFF;
+      color: #000000;
+      &:active{
+        background-color: #f5f5f5;
+      }
+    }
+    .item-left img {
+      width: 47px;
+      height: 52px;
+      vertical-align: middle;
+    }
+    .weui-flex__item {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      flex: 1;
+    }
+    .item-content {
+      padding-left: .1rem;
+      padding-right: .1rem;
+      span {
+        display: inline-block;
+        text-indent: 4px;
+      }
+      p{
+        text-align: left;
+        &:last-child {
+          color: #000000 !important;
+        }
+      }
+    }
+    .weui-footer__text {
+      padding: 0 .34em;
+      font-size: 12px;
+    }
+    .weui-footer {
+      color: #999;
+    }
+    .item-right {
+      position: relative;
+      font-size:.33rem;
+      img {
+        width: 12px;
+        height: 12px;
+        margin-left: .1rem;
+      }
+    }
+  }
+  /*------------------------------订单详情-----------------------------------*/
+  #wrapper{
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    font-family: PingFangSC-Regular;
+    color: #9b9b9b;
+    font-size:14px;
+    background: #f8f8f8;
+    h3 {
+      padding: 8px 15px;
+      font-size: 16px;
+      color: #4a4a4a;
+      font-family:PingFangSC-Medium;
+      font-weight: normal;
+    }
+    p{
+      padding-left: 15px;
+      line-height: 24px;
+      padding-top: .02rem;
+      padding-bottom: .02rem;
+      span{
+        color: #4b4b4b;
+        &.leftLabel{
+          color: #9b9b9b;
+          display: inline-block;
+          width: 72px;
+          vertical-align: top;
+        }
+      }
+    }
+    .head {
+      font-size:14px;
+      p{
+        padding-left: 16px;
+        height: 36px;
+        line-height: 36px;
+        background: #fff;
+        &.insurePrice{
+          margin-top: 8px;
+          span{
+            float: right;
+            padding-right: 12px;
+          }
+        }
+      }
+      img{
+        height: .32rem;
+        width: .32rem;
+        vertical-align: middle;
+        margin-right: .2rem;
+      }
+    }
+    .footer {
+      p{
+        font-size:12px;
+        color:#3f49c3;
+        width: 200px;
+        margin: 0 auto;
+        padding: 12px 0;
+        background: url(/static/img/icon_explain.png) left center no-repeat;
+        background-size: 12px;
+        text-align: right;
+      }
+      &.service{
+        margin-bottom: .3rem;
+        margin-top: .3rem;
+        text-align: center;
+        img{
+          vertical-align: middle;
+          display: inline-block;
+          width: 18px;
+          height: 18px;
+        }
+        a{
+          color: #666;
+          text-decoration: none
+        }
+      }
+    }
+  }
+  .orderDetail{
+    background: #fff;
+    margin-top: 1px;
+  }
+  .serviceDetail {
+    margin-top: 8px;
+    background: #fff;
+    p{
+      &:last-child{
+        padding-bottom: .2rem!important;
+      }
+      img{
+        height: 14px;
+        width: 14px;
+        vertical-align: middle;
+        margin-right: 7px;
+      }
+    }
+  }
+  #error {
+    display: none;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    color: #bfbfbf;
+    img {
+      height: 110px;
+      width: 110px;
+      margin: 30px auto 0;
+    }
+  }
+}
+
